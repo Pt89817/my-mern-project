@@ -1,0 +1,134 @@
+/* App.css */
+body{
+  background-image: linear-gradient(#A4D7F1,#FDFDFD);
+  background-repeat: no-repeat;
+}
+
+.bg-gradient {
+  background: linear-gradient(135deg, 
+    #667eea 0%, 
+    #764ba2 25%, 
+    #f093fb 50%, 
+    #f5576c 75%, 
+    #ffd166 100%);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  min-height: 100vh;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Card styling */
+.card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.card-header {
+  border-radius: 20px 20px 0 0 !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Form input styling */
+.form-control, .form-control:focus {
+  border: 1px solid #dee2e6;
+  border-left: none;
+  box-shadow: none;
+  transition: all 0.3s;
+}
+
+.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.25rem rgba(102, 126, 234, 0.15);
+}
+
+.input-group-text {
+  border: 1px solid #dee2e6;
+  border-right: none;
+  background: #f8f9fa;
+}
+
+/* Button styling */
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-outline-secondary:hover .bi-eye {
+  color: #fff;
+}
+
+/* Link styling */
+a {
+  transition: all 0.3s;
+}
+
+a:hover {
+  transform: translateX(2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card-body {
+    padding: 2rem !important;
+  }
+  
+  .social-buttons {
+    flex-direction: column;
+  }
+  
+  .social-buttons .btn {
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+}
+
+/* Animation for form elements */
+.form-control, .btn {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effects */
+.form-group:hover .input-group-text {
+  background: #e9ecef;
+}
+
+/* Loading state for button */
+.btn-loading {
+  position: relative;
+  color: transparent !important;
+}
+
+.btn-loading:after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spinner 0.6s linear infinite;
+}
+
+@keyframes spinner {
+  to { transform: rotate(360deg); }
+}
+Link{
+  text-decoration: none;
+}
